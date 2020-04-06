@@ -1,0 +1,262 @@
+html, body{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: 38px 600px auto auto auto auto auto auto auto auto 55px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+.heroOne {
+    grid-column-start: 1;
+    grid-column-end: 18;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(../images/scubahero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.heroOne h1 {
+    text-align: center;
+    color: #DFB841;
+    margin-top: 200px;
+    font-size: 60px;
+    text-shadow: 0px 0px 10px black;
+}
+.headingOne{
+    grid-column-start: 1;
+    grid-column-end: 18;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    background-color: #DFB841;
+}
+.blurb{
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin: 0px 16px;
+    margin-bottom: 8px;
+}
+.image{
+    grid-column-start: 10;
+    grid-column-end: 17;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin: 16px 16px 0px 0px;
+    margin-bottom: 8px;
+}
+.image img{
+    object-fit: cover;
+    width: 100%
+}
+
+.bookbtn {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color: #648381;
+    padding: 15px 34px;
+    text-align: center;
+    font-size: 18px;
+    /*    margin: 4px 2px;*/
+    cursor: pointer;
+    /*    margin-left: 45%;*/
+    border: none;
+    transition: background-color .4s;
+
+}
+.bookbtn a{
+    text-decoration: none;
+    color: white;
+}
+.mapbtn {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color: #648381;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 18px;
+    /*margin: 4px 2px;*/
+    cursor: pointer;
+    /*margin-left: 45%;*/
+    border: none;
+    transition: background-color .4s, color .4s;
+
+}
+.mapbtn a{
+    margin-top: 200px;
+    text-decoration: none;
+    color: white;
+}
+.mapbtn:hover, .bookbtn:hover{
+    background-color: #DFB841;
+    color: #648385;
+}
+
+#button1:focus, #button2:focus {
+    outline: 0;
+}
+.headingTwo{
+    grid-column-start: 1;
+    grid-column-end: 18;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    text-align: center;
+    background-color: #DFB841;
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity*/
+
+.act1{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    position: relative;
+    width: 50%;
+    background-color: black;
+}
+.act1 .imglink, .act2 .imglink, .act3 .imglink {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.act1 .middle, .act3 .middle, .act2 .middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.act1:hover img, .act2:hover img, .act3:hover img{
+    opacity: 0.6;
+}
+.act1:hover .middle, .act2:hover .middle, .act3:hover .middle{
+    opacity: 1;
+
+}
+.act1 .text, .act2 .text, .act3 .text   {
+    color: white;
+    opacity: .9;
+    font-size: 18px;
+}
+.act2{
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    position: relative;
+    width: 50%;
+    background-color: black;
+}
+.act3{
+    grid-column-start: 12;
+    grid-column-end: 16;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    position: relative;
+    width: 50%;
+    background-color: black;
+}
+
+/*.heroTwo h1 {
+    text-align: center;
+    color: #DFB841;
+    margin-top: 100px;
+    font-size: 60px;
+    text-shadow: 0px 0px 10px black;
+}*/
+
+/*Footer*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #DFB841;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1100px){
+    body{
+
+    }
+    .blurb{
+        grid-column-start: 2;
+        grid-column-end: 17;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding: 0;
+        margin: 0;
+    }
+    .image{
+        grid-column-start: 4;
+        grid-column-end: 15;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        padding: 0;
+        margin: 0 0 10px 0;
+
+    }
+    .bookbtn{
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    .mapbtn{
+        grid-column-start: 11;
+        grid-column-end: 12;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    .headingTwo{
+        grid-column-start: 1;
+        grid-column-end: 18;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    .act1{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 4;
+        grid-column-end: 8;
+    }
+    .act2{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 8;
+        grid-column-end: 12;
+    }
+    .act3{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 12;
+        grid-column-end: 16;
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: 18;
+        grid-row-start: 10;
+    }
+}
